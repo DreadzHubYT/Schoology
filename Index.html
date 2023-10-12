@@ -32,7 +32,7 @@
         }
 
         .cool-button {
-            background-color: #3498db;
+            background: linear-gradient(to right, #3498db, #2980b9); /* Apply blue gradient */
             color: #fff;
             border: none;
             padding: 15px 30px;
@@ -42,7 +42,7 @@
         }
 
         .cool-button:hover {
-            background-color: #2980b9;
+            background: linear-gradient(to right, #2980b9, #3498db); /* Reverse gradient on hover */
             transform: scale(1.05);
         }
     </style>
@@ -52,7 +52,29 @@
         <h1>Unblocked Games</h1>
     </div>
     <div class="button-container">
-        <button class="cool-button">Cool Button</button>
+        <button class="cool-button" onclick="openGame()">Play Game</button>
     </div>
+
+    <script>
+        function openGame() {
+            var win = window.open();
+            var url = "https://raw.githack.com/DreadzHubYT/Schoology/main/Search.html";
+            var iframe = win.document.createElement('iframe');
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+            win.document.title = "Home | Schoology";
+
+            // Change the browser tab's icon
+            var link = win.document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = 'https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1'; // Replace 'URL_TO_YOUR_FAVICON' with the actual URL of your custom favicon
+            win.document.head.appendChild(link);
+        }
+    </script>
 </body>
 </html>
+
