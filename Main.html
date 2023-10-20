@@ -117,7 +117,7 @@ function openGame(url) {
 
     // Create a close button
     var closeButton = win.document.createElement('button');
-    closeButton.innerText = 'Close Tab';
+    closeButton.innerText = 'Panic Button';
     closeButton.style.position = 'fixed';
     closeButton.style.top = '10px';
     closeButton.style.right = '10px';
@@ -126,6 +126,7 @@ function openGame(url) {
     closeButton.style.background = '#fff';
     closeButton.style.border = '1px solid #000';
     closeButton.style.cursor = 'pointer';
+    closeButton.style.class = 'cool-button';
 
     // Add an event listener to close the tab when the button is clicked
     closeButton.addEventListener('click', function () {
